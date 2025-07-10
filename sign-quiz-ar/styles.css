@@ -1,0 +1,18 @@
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui}
+body{display:flex;flex-direction:column;height:100vh;background:#0f172a;color:#fff}
+header{padding:0.5rem 1rem;background:#1e293b;display:flex;justify-content:space-between;align-items:center}
+h1{font-size:1.1rem}
+#score-board{font-size:1rem}
+main{flex:1;position:relative;overflow:hidden}
+video,canvas{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:0.5rem}
+#overlay{pointer-events:none}
+#quiz-container{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);display:flex;justify-content:center;align-items:center;backdrop-filter:blur(4px);z-index:10}
+#quiz-card{background:#f9fafb;color:#0f172a;padding:1.5rem;border-radius:1rem;width:90%;max-width:380px;display:flex;flex-direction:column;gap:1rem}
+#quiz-card h2{font-size:1.25rem;color:#111827}
+#answer-input{padding:0.5rem;border:1px solid #cbd5e1;border-radius:0.5rem}
+#submit-btn{padding:0.5rem;border:none;background:#2563eb;color:#fff;border-radius:0.5rem;cursor:pointer;transition:transform 0.2s}
+#submit-btn:hover{transform:scale(1.03)}
+#close-btn{position:absolute;top:0.25rem;right:0.5rem;background:transparent;border:none;font-size:1.25rem;cursor:pointer;color:#0f172a}
+.hidden{display:none}
+.toast{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);background:#38bdf8;color:#000;padding:0.75rem 1rem;border-radius:0.75rem;animation:fade 3s forwards}
+@keyframes fade{0%{opacity:1}80%{opacity:1}100%{opacity:0}}

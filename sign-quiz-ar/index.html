@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>AR Traffic Sign Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.19.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@2.2.2"></script>
+</head>
+<body>
+  <header>
+    <h1>🚦 AR Traffic Sign Quiz</h1>
+    <div id="score-board">Σκορ: <span id="score">0</span></div>
+  </header>
+
+  <main>
+    <video id="video" autoplay playsinline></video>
+    <canvas id="overlay"></canvas>
+  </main>
+
+  <div id="quiz-container" class="hidden">
+    <div id="quiz-card">
+      <h2 id="sign-name"></h2>
+      <p>Τι σημαίνει αυτή η πινακίδα;</p>
+      <input type="text" id="answer-input" placeholder="Γράψε την απάντηση..." />
+      <button id="submit-btn">Υποβολή</button>
+      <button id="close-btn">✖</button>
+    </div>
+  </div>
+
+  <template id="toast-template">
+    <div class="toast"></div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
